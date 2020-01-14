@@ -1,10 +1,15 @@
 var apikey = "BYMNX5T5A8BD5U1T";
-var stockList = ["AMZN","AAPL","MSFT","VTI","VOO"]
+var stockList = ["AMZN","AAPL","MSFT","VTI","VPL"]
 
 function createStockDiv(ticker, price, change) {
     //Create new ticker div
     var stockDiv = document.createElement("div");
     stockDiv.id = ticker;
+    if (parseInt(change) >= 0) {
+        stockDiv.className = "stock-up"
+    } else {
+        stockDiv.className = "stock-down"
+    }
     stockDiv.innerText = ticker+" "+price+" "+change;
 
     //Append ticker to list

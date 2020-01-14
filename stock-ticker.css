@@ -27,6 +27,14 @@
     position: relative;
 }
 
+.stock-down {
+    color: hsl(0, 50%, 50%);
+}
+
+.stock-up {
+    color: hsl(120, 50%, 50%);
+}
+
 @keyframes moveSlideshow {
     0% {
         transform: translateX(-100%)
