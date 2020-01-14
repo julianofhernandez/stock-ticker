@@ -10,7 +10,7 @@ function createStockDiv(ticker, price, change) {
     } else {
         stockDiv.className = "stock-down"
     }
-    stockDiv.innerText = ticker+" "+price+" "+change;
+    stockDiv.innerText = ticker+" $"+price+" "+change+"%";
 
     //Append ticker to list
     var currentDiv = document.getElementById("ticker-text");
