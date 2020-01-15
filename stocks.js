@@ -1,5 +1,5 @@
 var apikey = "BYMNX5T5A8BD5U1T";
-var stockList = ["AMZN","AAPL","MSFT","VTI","VPL"]
+var stockList = ["AMZN"]//,"AAPL","MSFT","VTI","VPL"]
 
 function createStockDiv(ticker, price, change) {
     //Create new ticker div
@@ -27,5 +27,6 @@ function getStockData(ticker) {
     })
 }
 
-stockList.forEach(element => {getStockData(element)})
-
+for (stock in stockList) {
+    getStockData(stock)
+}
